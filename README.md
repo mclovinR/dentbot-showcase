@@ -8,8 +8,6 @@ DentBot is my university graduation project (proyecto de titulación, Ingenierí
 
 **Stack:** PHP · MVC · MySQL (stored procedures, role-based DB users) · JavaScript · Flatpickr · DomPDF · DeepSeek API
 
-<!-- TODO: add a short demo video or GIF here -->
-
 ---
 
 ## Screenshots
@@ -74,7 +72,7 @@ The chatbot booking flow uses the same validation, so a patient cannot book a sl
 
 ## Security audit
 
-I audited the patient chatbot and the modules around it and found **8 vulnerabilities**. Summary in [docs/security-audit.md](docs/security-audit.md).
+The team audited the patient chatbot and the modules around it. Main findings (details in [docs/security-audit.md](docs/security-audit.md)):
 
 | Finding | Mitigation |
 |---|---|
@@ -82,7 +80,7 @@ I audited the patient chatbot and the modules around it and found **8 vulnerabil
 | IDOR (access to other patients' data by changing an ID) | Ownership check on the server for every record request |
 | Cross-site scripting (XSS) in rendered chatbot content | Output escaping before rendering |
 
-I also fixed reliability issues in the chatbot: a duplicated-variable bug, permission errors and fragile JSON parsing of the model's responses.
+Chatbot reliability fixes: a duplicated-variable bug, permission errors and fragile JSON parsing of the model's responses.
 
 ## Project management and feasibility
 
@@ -91,9 +89,13 @@ I also fixed reliability issues in the chatbot: a duplicated-variable bug, permi
 
 ## My role
 
-<!-- TODO: confirm each line; keep only what you did -->
 - Appointment scheduling: booking screen, slot validation and stored procedures
 - Dentist schedule configuration (shifts and vacations)
+- Patient and dentist chatbots with the DeepSeek API, including the guided booking flow
 - Project planning (WBS, RACI) and financial feasibility study
 
-- Alexander Rodríguez Del Valle — [GitHub](https://github.com/mclovinR) · [LinkedIn](https://www.linkedin.com/in/alexander-rodriguez-del-valle/)
+## Author
+
+Alexander Rodríguez Del Valle — [GitHub](https://github.com/mclovinR) · [LinkedIn](https://www.linkedin.com/in/alexander-rodriguez-del-valle/)
+
+DentBot was developed as a team; this page describes the project as a whole and my part in it.
